@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3c.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Edit Page</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:outputStylesheet name="default.css" library="css" />
+            <h:outputStylesheet name="cssLayout.css" library="css" />
+        </h:form>
+
+        <div id="top" class="top">
+            <h1>Edit Issue</h1>
+        </div>
+        <div>
+            <div id="left">
+            	<h:link outcome="1-view" value="View Issues" /> <br />
+                <h:link outcome="3-create" value="Create Issue" />
+            </div>
+
+            <div id="content" class="left_content">
+                <h:form>
+					<h:panelGrid columns="3">
+						
+						ID
+						<h:outputText value="#{issueManager.currentIssue.id}" />
+						<h:outputText />
+						
+						Author
+						<h:outputText value="#{issueManager.currentIssue.author}" />
+						<h:outputText />
+						
+						Title
+						<h:inputText value="#{issueManager.currentIssue.title}" id="title" />
+						<h:messages for="title" />
+						
+						Status
+						<h:inputText value="#{issueManager.currentIssue.status}" id="status" />
+						<h:messages for="status" />
+						
+						<f:facet name="footer">
+				          <h:commandButton id="submit" 
+				          					value="Submit changes" 
+				          					action="#{issueEdit.submit(issueManager.currentIssue)}" />
+				          <h:commandButton id="cancel"
+	                                         value="Cancel"
+	                                         action="1-view"
+	                                         immediate="true" />
+				        </f:facet>
+				        
+					</h:panelGrid>
+				</h:form>
+            </div>
+        </div>        
+        
+    </h:body>
+</html>

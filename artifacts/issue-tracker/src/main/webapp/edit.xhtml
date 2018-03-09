@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3c.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+	<f:metadata>
+      <f:viewParam name="id" value="#{issueDetails.id}"></f:viewParam>
+    </f:metadata>
+    <h:head>
+        <title>Edit Issue</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:outputStylesheet name="default.css" library="css" />
+            <h:outputStylesheet name="cssLayout.css" library="css" />
+        </h:form>
+
+        <div id="top" class="top">
+            <h1>Edit Issue</h1>
+        </div>
+        <div>
+            <div id="left">
+                <h:form>
+                	<h:link outcome="index" value="Main" /> 
+                	<br />
+                	<h:link outcome="create" value="Create Issue" />
+                </h:form>
+            </div>
+
+            <div id="content" class="left_content">
+				<h:form>
+					<h:panelGrid columns="3">
+						
+						ID
+						<h:outputText value="#{issueManager.currentIssue.id}" />
+						<h:outputText />
+						
+						Title
+						<h:inputText value="#{issueManager.currentIssue.title}" id="title" />
+						<h:messages for="title" />
+						
+						<f:facet name="footer">
+				          <h:commandButton value="Submit changes" action="#{issueEdit.submit(issueManager.currentIssue)}" />
+				        </f:facet>
+				        
+					</h:panelGrid>
+				</h:form>
+            </div>
+        </div>        
+        
+    </h:body>
+</html>
