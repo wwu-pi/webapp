@@ -13,7 +13,7 @@ $ git clone https://github.com/wwu-pi/webapp
 $ cd webapp
 ```
 
-We have an example JSF web application in the [/artifacts/issue-tracker](https://github.com/wwu-pi/webapp/artifacts/issue-tracker) directory.
+We have an example JSF web application in the [/tree/master/artifacts/issue-tracker](https://github.com/wwu-pi/webapp/artifacts/issue-tracker) directory.
 
 First, navigate to it:
 
@@ -33,7 +33,7 @@ Alternatively, you can build a deployable WAR file with:
 $ mvn clean package
 ```
 
-The tool is grouped in a maven module located at [/artifacts/tap18-webapp-module](https://github.com/wwu-pi/webapp/artifacts/tap18-webapp-module).
+The tool is grouped in a maven module located at [/tree/master/artifacts/tap18-webapp-module](https://github.com/wwu-pi/webapp/artifacts/tap18-webapp-module).
 
 First, navigate to that maven project:
 
@@ -50,7 +50,7 @@ $ mvn clean compile
 
 Once successfully compiled, you can start the test case generation tool.
 
-First, navigate to its main project located at [/artifacts/webapp](https://github.com/wwu-pi/webapp/webapp):
+First, navigate to its main project located at [/tree/master/artifacts/webapp](https://github.com/wwu-pi/webapp/webapp):
 
 ```bash
 $ cd ..
