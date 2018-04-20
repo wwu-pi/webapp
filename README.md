@@ -21,10 +21,10 @@ First, navigate to it:
 $ cd artifacts/issue-tracker
 ```
 
-You can now compile the sources with:
+You can now compile the sources:
 
 ```bash
-$ mvn clean compile
+$ mvn clean install
 ```
 
 Alternatively, you can build a deployable WAR file with:
@@ -42,13 +42,13 @@ $ cd ..
 $ cd tap18-webapp-module
 ```
 
-Then, compile all required sources:
+Then, install the required maven projects into your local repository:
 
 ```bash
-$ mvn clean compile
+$ mvn clean install
 ```
 
-Once successfully compiled, you can start the test case generation tool.
+Once successfully installed, you can start the test case generation tool.
 
 First, navigate to its main project located at [/artifacts/webapp](https://github.com/wwu-pi/webapp/tree/master/artifacts/webapp):
 
